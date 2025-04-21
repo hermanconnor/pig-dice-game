@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pig Dice Game</title>
-</head>
-<body>
-  <main></main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Pig Dice Game</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Pig Dice Game</h1>
+        <button id="new-game" class="btn btn-new">New Game</button>
+      </header>
+
+      <section class="game-board">
+        <!-- PLAYER 1 -->
+        <div class="player player-0 active">
+          <h2 class="player-name">Player 1</h2>
+          <p class="player-score">0</p>
+          <div class="player-current">
+            <p class="player-current-label">Current</p>
+            <p class="player-current-score">0</p>
+          </div>
+        </div>
+
+        <!-- GAME CONTROLS -->
+        <section class="game-controls">
+          <div class="dice-container">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='10' fill='%23ffffff' stroke='%23000000' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23000000'/%3E%3C/svg%3E"
+              alt="Dice"
+              class="dice"
+            />
+          </div>
+          <div class="controls">
+            <button id="roll-dice" class="btn btn-roll">Roll Dice</button>
+            <button id="hold" class="btn btn-hold">Hold</button>
+          </div>
+        </section>
+
+        <!-- PLAYER 2 -->
+        <div class="player player-1">
+          <h2 class="player-name">Player 2</h2>
+          <p class="player-score">0</p>
+          <div class="player-current">
+            <p class="player-current-label">Current</p>
+            <p class="player-current-score">0</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RULES -->
+      <section class="rules">
+        <h3>How to Play</h3>
+        <ul>
+          <li>The game has 2 players, playing in rounds</li>
+          <li>
+            In each turn, a player rolls a dice as many times as they wish
+          </li>
+          <li>Each result gets added to their CURRENT score</li>
+          <li>
+            If the player rolls a 1, all their CURRENT score is lost and it's
+            the next player's turn
+          </li>
+          <li>
+            The player can choose to 'Hold', which means their CURRENT score
+            gets added to their TOTAL score
+          </li>
+          <li>After holding, it's the next player's turn</li>
+          <li>
+            The first player to reach 100 points on TOTAL score wins the game
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
