@@ -177,3 +177,50 @@ h1 {
 .rules li {
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 900px) {
+  .game-board {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .game-controls {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    flex-direction: row;
+    margin: 1rem 0;
+  }
+
+  .player-0 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .player-1 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-board {
+    grid-template-columns: 1fr;
+  }
+
+  .game-controls {
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  .player-0 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .player-1 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
