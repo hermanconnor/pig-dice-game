@@ -65,6 +65,14 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.player.active .player-name::after {
+  content: '•';
+  font-size: 2rem;
+  color: #e76f51;
+  margin-left: 1rem;
+  animation: pulse 1s infinite;
+}
+
 .player-score {
   font-size: 3rem;
   font-weight: bold;
@@ -109,6 +117,10 @@ h1 {
   height: 100%;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
+}
+
+.dice.rolling {
+  animation: roll 0.4s ease;
 }
 
 .controls {
@@ -222,5 +234,26 @@ h1 {
   .player-1 {
     grid-column: 1;
     grid-row: 3;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
   }
 }
