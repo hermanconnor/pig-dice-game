@@ -190,6 +190,11 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.winner {
+  background-color: oklch(72.3% 0.219 149.579);
+  animation: pulse 1s infinite;
+}
+
 @media (max-width: 900px) {
   .game-board {
     grid-template-columns: 1fr 1fr;
