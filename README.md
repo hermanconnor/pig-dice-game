@@ -24,7 +24,7 @@ To get the **Pig Dice Game** up and running on your machine:
 1. **Clone** this repository:
 
    ```bash
-   git clone https://github.com/your-username/pig-dice-game.git
+   git clone https://github.com/hermanconnor/pig-dice-game.git
    ```
 
 2. **Navigate** to the project directory:
